@@ -49,10 +49,10 @@
 			<field name="arch" type="xml">
 				<pivot string="分析">
 					<!-- 行 -->
-			
+					<field name="people_ref" />
 
 					<!-- 列 -->
-
+					<field name="total"/>
 
 				</pivot>
 			</field>

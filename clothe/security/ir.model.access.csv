@@ -1,8 +1,10 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 putong_manager_access_ir_trade_order,trade_order_perm_base,clothe.model_trade_order,putong_manager,1,1,1,1
 putong_manager_access_ir_trade_order_item,trade_order_item_perm_base,clothe.model_trade_order_item,putong_manager,1,1,1,1
-putong_manager_access_ir_trade_stock,trade_stock_perm_base,clothe.model_trade_stock,putong_manager,1,1,1,1
+putong_manager_access_ir_trade_stock,trade_stock_perm_base,clothe.model_trade_stock,putong_manager,1,0,0,0
 putong_manager_access_ir_trade_dis_rate,trade_dis_rate_perm_base,clothe.model_trade_dis_rate,putong_manager,1,1,1,1
+putong_manager_access_ir_trade_people,trade_people_perm_base,clothe.model_trade_people,putong_manager,1,1,1,1
+
 
 big_manager_access_ir_trade_people,trade_people_perm_base,clothe.model_trade_people,big_manager,1,1,1,1
 big_manager_access_ir_trade_order,trade_order_perm_base,clothe.model_trade_order,big_manager,1,1,1,1

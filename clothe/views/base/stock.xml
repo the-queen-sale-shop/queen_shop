@@ -24,9 +24,9 @@
                             <field name="another_name"/>
                             <field name="total_num"/>
                             <field name="price_sell"/>
-                            <field name="price_cost"/>
+                            <field name="price_cost" groups="clothe.big_manager"/>
                             <field name="num"/>
-                            <field name="cost_total"/>
+                            <field name="cost_total"  groups="clothe.big_manager"/>
                             <field name="intime"/>
                         </group>
                     </sheet>
@@ -42,10 +42,10 @@
                     <field name="name"/>
                     <field name="another_name"/>
                     <field name="total_num" sum="合计"/>
-                    <field name="price_sell"/>
-                    <field name="price_cost"/>
+                    <field name="price_sell" />
+                    <field name="price_cost"  groups="clothe.big_manager"/>
                     <field name="num" sum="合计"/>
-                    <field name="cost_total" sum="合计"/>
+                    <field name="cost_total" sum="合计"  groups="clothe.big_manager"/>
                     <field name="intime"/>
                 </tree>
             </field>

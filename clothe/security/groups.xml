@@ -2,12 +2,12 @@
 <openerp>
     <data noupdate="0">
         <record id="big_manager" model="res.groups">
-            <field name="name">大管理员</field>
+            <field name="name">店长</field>
             <field name="comment"></field>
         </record>
 
         <record id="putong_manager" model="res.groups">
-            <field name="name">管理员</field>
+            <field name="name">营业员</field>
             <field name="comment"></field>
         </record>
 

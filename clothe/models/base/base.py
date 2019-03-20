@@ -23,6 +23,7 @@ class trade_people(models.Model):
     name = fields.Char("顾客姓名", required=True)
     phone = fields.Char("联系方式")
     birthday = fields.Date("顾客生日")
+    score = fields.Float("积分")
     trade_num = fields.Integer("消费笔数")
     order_ids = fields.One2many('trade.order', 'people_ref', '订单详情')
     total = fields.Float("消费汇总",compute='_get_total',store=True)

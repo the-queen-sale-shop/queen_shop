@@ -24,9 +24,9 @@
                             <field name="phone"/>
                             <field name="birthday"/>
                         </group>
-                        <notebook>
-                            <page string="订单详情">
-                                <field name="order_ids">
+                        <notebook  groups="clothe.big_manager">
+                            <page string="订单详情"  groups="clothe.big_manager">
+                                <field name="order_ids"  groups="clothe.big_manager">
                                     <tree string=""  editable="bottom">
                                         <field name="name"/>
                                         <field name="rate_ref"/>
@@ -39,8 +39,8 @@
                             </page>
                         </notebook>
                         <group>
-                            <field name="total"/>
-                            <field name="profit"/>
+                            <field name="total"  groups="clothe.big_manager"/>
+                            <field name="profit"  groups="clothe.big_manager"/>
                         </group>
                     </sheet>
                 </form>

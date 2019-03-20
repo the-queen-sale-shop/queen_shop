@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="action_trade_people">
+            <field name="name">顾客</field>
+            <field name="res_model">trade.people</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p baby="oe_view_nocontent_create">创建第一条数据
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_trade_people_form">
+            <field name="name">顾客</field>
+            <field name="model">trade.people</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="phone"/>
+                            <field name="birthday"/>
+                        </group>
+                        <notebook>
+                            <page string="订单详情">
+                                <field name="order_ids">
+                                    <tree string=""  editable="bottom">
+                                        <field name="name"/>
+                                        <field name="rate_ref"/>
+                                        <field name="discount"/>
+                                        <field name="total"/>
+                                        <field name="profit"/>
+                                        <!--<field name="sale"/>-->
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <group>
+                            <field name="total"/>
+                            <field name="profit"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_trade_people_tree">
+            <field name="name">顾客</field>
+            <field name="model">trade.people</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="birthday"/>
+                    <field name="total"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='view_trade_people_search'>
+            <field name="name">顾客</field>
+            <field name="model">trade.people</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="birthday"/>
+                    <field name="total"/>
+                    <field name="profit"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

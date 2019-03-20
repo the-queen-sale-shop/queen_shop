@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.actions.act_window" id="action_ex_key">
+			<field name="name">KEY</field>
+			<field name="res_model">ex.base.key</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p baby="oe_view_nocontent_create">创建第一条数据
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_ex_key_form">
+			<field name="name">KEY</field>
+			<field name="model">ex.base.key</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form >
+					<sheet>
+						<group>
+							<field name="name" />
+							<field name="key" />
+							<field name="remark" />
+							<field name="isactive" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_ex_key_tree">
+			<field name="name">KEY</field>
+			<field name="model">ex.base.key</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
+					<field name="key" />
+					<field name="remark" />
+					<field name="isactive" />
+				</tree>
+			</field>
+		</record>
+
+
+		<record model='ir.ui.view' id='view_ex_key_search'>
+			<field name="name">KEY</field>
+			<field name="model">ex.base.key</field>
+			<field name="arch" type="xml">
+				<search string="名称" >
+					<field name="name" />
+					<field name="key" />
+				</search>
+			</field>
+		</record>
+
+	</data>
+</openerp>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.actions.act_window" id="action_app_tpl">
+			<field name="name">app应用模板</field>
+			<field name="res_model">ex.sso.app.tpl</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p baby="oe_view_nocontent_create">创建第一条数据
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_app_tpl_form">
+			<field name="name">app应用模板</field>
+			<field name="model">ex.sso.app.tpl</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form >
+					<sheet>
+						<group>
+							<field name="name" />
+							<field name="url" />
+							<field name="appsecret" />
+							<field name="isactive" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_app_tpl_tree">
+			<field name="name">app应用模板</field>
+			<field name="model">ex.sso.app.tpl</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
+					<field name="url" />
+					<field name="appsecret" />
+					<field name="isactive" />
+				</tree>
+			</field>
+		</record>
+
+
+		<record model='ir.ui.view' id='view_app_tpl_search'>
+			<field name="name">app应用模板</field>
+			<field name="model">ex.sso.app.tpl</field>
+			<field name="arch" type="xml">
+				<search string="名称" >
+					<field name="name" />
+				</search>
+			</field>
+		</record>
+
+	</data>
+</openerp>

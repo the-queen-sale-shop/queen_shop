@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="odoo_res_city_tree" model="ir.ui.view">
+            <field name="name">res.city.tree</field>
+            <field name="model">res.city</field>
+            <field name="arch" type="xml">
+                <tree string="市">
+                    <field name="a_z"/>
+                    <field name="spelling"/>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="odoo_res_city_form" model="ir.ui.view">
+            <field name="name">res.city.form</field>
+            <field name="model">res.city</field>
+            <field name="arch" type="xml">
+                <form string="市">
+                    <group>
+                        <field name="name"/>
+                        <field name="a_z"/>
+                        <field name="spelling"/>
+                        <field name="code"/>
+                        <field name="country_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_odoo_area_country" model="ir.actions.act_window">
+            <field name="name">市</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.city</field>
+            <field name="view_type">form</field>
+            <field name="help">市管理</field>
+        </record>
+
+
+        <menuitem action="action_odoo_area_country" name="市" id="menu_odoo_area_country_partner"
+                  parent="Amos_City.menu_utm" sequence="3" groups="base.group_no_one"/>
+
+
+        <record id="odoo_res_area_tree" model="ir.ui.view">
+            <field name="name">res.area.tree</field>
+            <field name="model">res.area</field>
+            <field name="arch" type="xml">
+                <tree string="区域">
+                    <field name="a_z"/>
+                    <field name="spelling"/>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="odoo_res_area_form" model="ir.ui.view">
+            <field name="name">res.area.form</field>
+            <field name="model">res.area</field>
+            <field name="arch" type="xml">
+                <form string="区域">
+                    <group>
+                        <field name="name"/>
+
+                        <field name="a_z"/>
+                        <field name="spelling"/>
+                        <field name="code"/>
+                        <field name="country_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_odoo_subdivide_country" model="ir.actions.act_window">
+            <field name="name">区域</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.area</field>
+            <field name="view_type">form</field>
+            <field name="help">区域管理</field>
+        </record>
+
+
+        <menuitem action="action_odoo_subdivide_country" name="区域" id="menu_odoo_subdivide_country_partner"
+                  parent="Amos_City.menu_utm" sequence="4" groups="base.group_no_one"/>
+
+
+        <record model="ir.ui.view" id="res_country_state_tree_inherit">
+            <field name="name">res.country.state.state</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="a_z"/>
+                    <field name="spelling"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="res_country_state_form_inherit">
+            <field name="name">res.country.state.state</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="a_z"/>
+                    <field name="spelling"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="res_country_tree_inherit">
+            <field name="name">res.country</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="a_z"/>
+                    <field name="spelling"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="res_country_form_inherit">
+            <field name="name">res.country</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="a_z"/>
+                    <field name="spelling"/>
+                </xpath>
+            </field>
+        </record>
+
+        <menuitem action="base.action_country" id="menu_country_partner" name="国家" parent="Amos_City.menu_utm"
+                  sequence="1" groups="base.group_no_one"/>
+
+
+        <menuitem action="base.action_country_state" name="省份" id="menu_country_state_partner"
+                  parent="Amos_City.menu_utm"
+                  sequence="2" groups="base.group_no_one"/>
+
+
+    </data>
+</odoo>

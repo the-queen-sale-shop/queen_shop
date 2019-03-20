@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_tool" name="配置" sequence="100" groups="base.group_erp_manager"/>
+        <menuitem id="menu_basic_data" name="基础资料" parent="menu_tool" sequence="0"/>
+        <menuitem id="menu_parameter" name="辅助配置" parent="menu_tool" sequence="1"/>
+        <menuitem id="menu_good" name="高级配置" parent="menu_tool" sequence="2"/>
+        <menuitem id="menu_utm" name="常规设计" parent="menu_tool" sequence="3"/>
+
+    </data>
+</odoo>

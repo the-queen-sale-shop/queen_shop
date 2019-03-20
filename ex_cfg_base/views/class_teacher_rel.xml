@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.actions.act_window" id="action_class_teacher_rel">
+			<field name="name">班级教师关系</field>
+			<field name="res_model">ex.base.db.class.teacher.rel</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p baby="oe_view_nocontent_create">创建第一条数据
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_class_teacher_rel_form">
+			<field name="name">班级教师关系</field>
+			<field name="model">ex.base.db.class.teacher.rel</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form >
+					<sheet>
+						<group>
+							<field name="isactive" />
+							<field name="class_ref" />
+						</group>
+						<group>
+							<group>
+								<field name="teacher_ref" />
+								<field name="name" />
+							</group>
+							<group>
+								<field name="write_app" />
+								<field name="write_time" />
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_class_teacher_rel_tree">
+			<field name="name">班级教师关系</field>
+			<field name="model">ex.base.db.class.teacher.rel</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="class_ref" />
+					<field name="teacher_ref" />
+					<field name="name" />
+					<field name="write_app" />
+					<field name="write_time" />
+				</tree>
+			</field>
+		</record>
+
+	</data>
+</openerp>

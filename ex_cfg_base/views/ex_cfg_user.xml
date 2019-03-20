@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.actions.act_window" id="action_cfg_user">
+			<field name="name">平台用户</field>
+			<field name="res_model">ex.cfg.user</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p baby="oe_view_nocontent_create">创建第一条数据
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_cfg_user_form">
+			<field name="name">平台用户</field>
+			<field name="model">ex.cfg.user</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form >
+					<sheet>
+						<group>
+							<field name="name" readonly="1"/>
+							<field name="uid" readonly="1"/>
+							<field name="role" readonly="1"/>
+							<field name="openid" readonly="1"/>
+							<field name="phone" readonly="1"/>
+							<field name="school_ref" readonly="1"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_cfg_user_tree">
+			<field name="name">平台用户</field>
+			<field name="model">ex.cfg.user</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" readonly="1"/>
+					<field name="uid" readonly="1"/>
+					<field name="role" readonly="1"/>
+					<field name="openid" readonly="1"/>
+					<field name="phone" readonly="1"/>
+					<field name="school_ref" readonly="1"/>
+
+
+				</tree>
+			</field>
+		</record>
+
+
+		<record model='ir.ui.view' id='view_cfg_user_search'>
+			<field name="name">平台用户</field>
+			<field name="model">ex.cfg.user</field>
+			<field name="arch" type="xml">
+				<search string="姓名" >
+					<field name="name" />
+					<field name="school_ref" />
+					<field name="phone" />
+				</search>
+			</field>
+		</record>
+
+	</data>
+</openerp>

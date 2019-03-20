@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.actions.act_window" id="action_ex_class">
+			<field name="name">班级</field>
+			<field name="res_model">ex.base.class</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p baby="oe_view_nocontent_create">创建第一条数据
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_ex_class_form">
+			<field name="name">班级</field>
+			<field name="model">ex.base.class</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form >
+					<sheet>
+						<group>
+							<field name="displayname" />
+							<field name="school_ref" />
+							<field name="grade_ref" />
+							<field name="name" />
+							<field name="isactive" />
+						</group>
+
+						<notebook>
+							<page string="学生">
+								<field name="student_ids">
+									<tree string=""  editable="bottom">
+										<field name="isactive" />
+										<field name="name" />
+										<field name="sex" />
+										<field name="address" />
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_ex_class_tree">
+			<field name="name">班级</field>
+			<field name="model">ex.base.class</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree>
+
+					<field name="displayname" />
+					<field name="school_ref" />
+					<field name="grade_ref" />
+					<field name="name" />
+					<field name="isactive" />
+				</tree>
+			</field>
+		</record>
+
+
+		<record model='ir.ui.view' id='view_ex_class_search'>
+			<field name="name">班级</field>
+			<field name="model">ex.base.class</field>
+			<field name="arch" type="xml">
+				<search string="名称" >
+					<field name="school_ref" />
+					<field name="grade_ref" />
+					<field name="name" />
+
+				</search>
+			</field>
+		</record>
+
+	</data>
+</openerp>

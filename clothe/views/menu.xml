@@ -1,0 +1,19 @@
+<openerp>
+    <data>
+        <!--基础数据-->
+        <menuitem id="xs" name="订单管理"  sequence="0" action="action_trade_order" web_icon="clothe,static/description/salary.png"/>
+        <menuitem id="gk" name="顾客"  sequence="1" action="action_trade_people" web_icon="clothe,static/description/report1.png"/>
+        <menuitem id="kc" name="库存管理"  sequence="2" action="action_trade_stock" web_icon="clothe,static/description/zhang.png"/>
+        <!--<menuitem id="xsbb" name="销售报表"  sequence="3" action="action_trade_order_report" web_icon="clothe,static/description/yy.png"/>-->
+        <!--<menuitem id="aaaaaaaaaaa" name="订单详细"  sequence="3" action="action_trade_order_item" web_icon="clothe,static/description/salary.png"/>-->
+        <record id="get_report_data" model="ir.actions.server">
+            <field name="name">销售报表</field>
+            <field name="model_id" ref="clothe.model_trade_report"/>
+            <field name="condition">True</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">code</field>
+            <field name="code">action= model.get_myreport()</field>
+        </record>
+        <menuitem id="report_two" name="销售报表"  sequence="5" action="get_report_data" web_icon="clothe,static/description/yy.png"/>
+    </data>
+</openerp>

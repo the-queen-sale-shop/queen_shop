@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="action_report">
+            <field name="name">销售报表</field>
+            <field name="res_model">trade.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,graph</field>
+            <field name="help" type="html">
+                <p baby="oe_view_nocontent_create">创建第一条数据
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_report_tree">
+            <field name="name">销售报表</field>
+            <field name="model">trade.report</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="people_ref"/>
+                    <field name="trade_time"/>
+                    <field name="total" sum="合计"/>
+                    <field name="cost" sum="合计"/>
+                    <field name="profit" sum="合计"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_report_graph" model="ir.ui.view">
+			<field name="name">trade.report.graph</field>
+			<field name="model">trade.report</field>
+			<field name="arch" type="xml">
+
+				<graph string="分析">
+					<field name="name"/>
+					<field name="people_ref" type="measure" />
+					<field name="trade_time" type="measure" />
+                    <field name="total" type="measure" />
+				</graph>
+			</field>
+		</record>
+
+
+		<record id="view_report_pivot" model="ir.ui.view">
+			<field name="name">trade.report.pivot</field>
+			<field name="model">trade.report</field>
+			<field name="arch" type="xml">
+				<pivot string="分析">
+					<!-- 行 -->
+					<field name="people_ref" />
+
+					<!-- 列 -->
+					<field name="total"/>
+
+				</pivot>
+			</field>
+		</record>
+
+        <record model='ir.ui.view' id='view_report_search'>
+            <field name="name">销售报表</field>
+            <field name="model">trade.report</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="people_ref"/>
+                    <field name="trade_time"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

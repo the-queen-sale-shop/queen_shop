@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="action_trade_order_item">
+            <field name="name">订单明细</field>
+            <field name="res_model">trade.order.item</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p baby="oe_view_nocontent_create">创建第一条数据
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_trade_order_item_form">
+            <field name="name">订单明细</field>
+            <field name="model">trade.order.item</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="stock_ref"/>
+                            <field name="price_sell"/>
+                            <field name="price_cost"/>
+                            <field name="num"/>
+                            <field name="total"/>
+                            <field name="profit"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_trade_order_item_tree">
+            <field name="name">订单明细</field>
+            <field name="model">trade.order.item</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="stock_ref"/>
+                    <field name="price_sell"/>
+                    <field name="price_cost"/>
+                    <field name="num"/>
+                    <field name="total"/>
+                    <field name="profit"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='view_trade_order_item_search'>
+            <field name="name">订单明细</field>
+            <field name="model">trade.order.item</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="stock_ref"/>
+                    <field name="price_sell"/>
+                    <field name="price_cost"/>
+                    <field name="num"/>
+                    <field name="total"/>
+                    <field name="profit"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

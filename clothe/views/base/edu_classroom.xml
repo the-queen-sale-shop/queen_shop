@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="action_edu_classroom">
+            <field name="name">教室管理</field>
+            <field name="res_model">edu.classroom</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p baby="oe_view_nocontent_create">创建第一条数据
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_edu_classroom_form">
+            <field name="name">教室管理</field>
+            <field name="model">edu.classroom</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="remark"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_edu_classroom_tree">
+            <field name="name">教室管理</field>
+            <field name="model">edu.classroom</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="remark"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='view_edu_classroom_search'>
+            <field name="name">教室管理</field>
+            <field name="model">edu.classroom</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="remark"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

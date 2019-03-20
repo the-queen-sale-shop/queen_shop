@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.actions.act_window" id="action_ex_parent">
+			<field name="name">家长</field>
+			<field name="res_model">ex.base.db.parent</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p baby="oe_view_nocontent_create">创建第一条数据
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_ex_parent_form">
+			<field name="name">家长</field>
+			<field name="model">ex.base.db.parent</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form >
+					<sheet>
+						<group>
+							<field name="isactive" />
+							<field name="phone" />
+						</group>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="identification_id" />
+							</group>
+							<group>
+								<field name="gender" />
+								<field name="birthday" />
+							</group>
+						</group>
+
+						<notebook>
+							<page string="功能许可">
+								<field name="auth_ids">
+									<tree string=""  editable="bottom">
+										<field name="isactive" />
+										<field name="name" />
+										<field name="key" readonly="1"/>
+										<field name="expired_date" />
+									</tree>
+								</field>
+							</page>
+							<page string="微信绑定记录">
+								<field name="bind_ids">
+									<tree string=""  editable="bottom">
+										<field name="wechat_ref" />
+										<field name="openid" />
+									</tree>
+								</field>
+							</page>
+							<page string="智能设备">
+								<group>
+									<field name="ic_card"/>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_ex_parent_tree">
+			<field name="name">家长</field>
+			<field name="model">ex.base.db.parent</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
+					<field name="phone" />
+					<field name="identification_id" />
+					<field name="gender" />
+					<field name="birthday" />
+				</tree>
+			</field>
+		</record>
+
+
+		<record model='ir.ui.view' id='view_ex_parent_search'>
+			<field name="name">家长</field>
+			<field name="model">ex.base.db.parent</field>
+			<field name="arch" type="xml">
+				<search string="名称" >
+					<field name="name" />
+				</search>
+			</field>
+		</record>
+
+	</data>
+</openerp>

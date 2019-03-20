@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.actions.act_window" id="action_cfg_webchat">
+			<field name="name">微信通道配置</field>
+			<field name="res_model">ex.cfg.wechat</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p baby="oe_view_nocontent_create">创建第一条数据
+				</p>
+			</field>
+		</record>
+
+		<!--<record model="ir.ui.view" id="view_cfg_webchat_form">-->
+			<!--<field name="name">微信通道配置</field>-->
+			<!--<field name="model">ex.cfg.wechat</field>-->
+			<!--<field name="type">form</field>-->
+			<!--<field name="arch" type="xml">-->
+				<!--<form >-->
+					<!--<sheet>-->
+						<!--<group>-->
+							<!--<field name="name" required="1"/>-->
+							<!--<field name="appid" required="1"/>-->
+							<!--<field name="appsecret" required="1"/>-->
+							<!--<field name="encrypt_mode" required="1"/>-->
+							<!--<field name="encoding_aes_key" required="1"/>-->
+							<!--<field name="token" required="1"/>-->
+						<!--</group>-->
+					<!--</sheet>-->
+				<!--</form>-->
+			<!--</field>-->
+		<!--</record>-->
+
+		<!--<record model="ir.ui.view" id="view_cfg_webchat_tree">-->
+			<!--<field name="name">微信通道配置</field>-->
+			<!--<field name="model">ex.cfg.wechat</field>-->
+			<!--<field name="type">tree</field>-->
+			<!--<field name="arch" type="xml">-->
+				<!--<tree>-->
+					<!--<field name="name" readonly="1"/>-->
+					<!--<field name="appid" readonly="1"/>-->
+					<!--<field name="appsecret" readonly="1"/>-->
+					<!--<field name="encrypt_mode" readonly="1"/>-->
+					<!--<field name="encoding_aes_key" readonly="1"/>-->
+					<!--<field name="token" readonly="1"/>-->
+				<!--</tree>-->
+			<!--</field>-->
+		<!--</record>-->
+
+
+		<!--<record model='ir.ui.view' id='view_cfg_webchat_search'>-->
+			<!--<field name="name">微信通道配置</field>-->
+			<!--<field name="model">ex.cfg.wechat</field>-->
+			<!--<field name="arch" type="xml">-->
+				<!--<search string="名称" >-->
+					<!--<field name="name" />-->
+				<!--</search>-->
+			<!--</field>-->
+		<!--</record>-->
+
+	</data>
+</openerp>

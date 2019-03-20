@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <record id="big_manager" model="res.groups">
+            <field name="name">大管理员</field>
+            <field name="comment"></field>
+        </record>
+
+        <record id="putong_manager" model="res.groups">
+            <field name="name">管理员</field>
+            <field name="comment"></field>
+        </record>
+
+    </data>
+</openerp>

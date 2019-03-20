@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.actions.act_window" id="action_ex_student">
+			<field name="name">学生</field>
+			<field name="res_model">ex.base.db.student</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p baby="oe_view_nocontent_create">创建第一条数据
+				</p>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_ex_student_form">
+			<field name="name">学生</field>
+			<field name="model">ex.base.db.student</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form >
+					<sheet>
+						<field name="image_medium" widget="image" class="oe_avatar oe_left"/>
+						<group>
+							<group>
+								<field name="name" />
+								<field name="student_sn" />
+								<field name="phone" />
+							</group>
+							<group>
+								<field name="sex" />
+								<field name="identification_id" />
+								<field name="birthday" />
+							</group>
+						</group>
+						<notebook>
+
+							<page string="基础信息">
+								<group>
+									<field name="stu_code" />
+									<field name="openid" />
+									<field name="nick_name" />
+									<field name="sex" />
+									<field name="bloodtype" />
+									<field name="nation" />
+									<field name="nativeplace" />
+									<field name="address" />
+									<field name="idcard" />
+									<field name="introduce" />
+									<field name="allergy" />
+									<field name="interest" />
+								</group>
+							</page>
+
+							<page string="学籍记录">
+								<field name="his_ids">
+									<tree string=""  editable="bottom">
+										<field name="isactive" />
+										<field name="schoolname" />
+										<field name="year" />
+									</tree>
+								</field>
+							</page>
+							<page string="家长关系">
+								<field name="parent_ids">
+									<tree string=""  editable="bottom">
+										<field name="isactive" />
+										<field name="parent_ref" />
+										<field name="name" />
+									</tree>
+								</field>
+							</page>
+							<page string="老师关系">
+								<field name="teacher_ids">
+									<tree string=""  editable="bottom">
+										<field name="isactive" />
+										<field name="teacher_ref" />
+										<field name="name" />
+									</tree>
+								</field>
+							</page>
+							<page string="资料">
+								<field name="file_ids">
+									<tree string=""  editable="bottom">
+										<field name="filetype" />
+										<field name="title" />
+										<field name="file" />
+									</tree>
+								</field>
+							</page>
+							<page string="备注">
+								<group>
+									<field name="remark" />
+								</group>
+							</page>
+						</notebook>
+						<group>
+							<field name="isactive" />
+							<field name="class_ref" />
+
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_ex_student_tree">
+			<field name="name">学生</field>
+			<field name="model">ex.base.db.student</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
+					<field name="student_sn" />
+					<field name="sex" />
+					<field name="identification_id" />
+					<field name="birthday" />
+				</tree>
+			</field>
+		</record>
+
+
+		<record model='ir.ui.view' id='view_ex_student_search'>
+			<field name="name">学生</field>
+			<field name="model">ex.base.db.student</field>
+			<field name="arch" type="xml">
+				<search string="名称" >
+					<field name="name" />
+				</search>
+			</field>
+		</record>
+
+	</data>
+</openerp>

@@ -13,20 +13,106 @@
         <template id="report_templete">
             <t t-call="report.html_container">
                 <t t-foreach="docs" t-as="o">
-                    <div class="page" style="padding:10px;display:flex;flex-wrap: wrap;justify-content: space-between" >
-                        <p style="width:100%;text-align:center" align="center">
-                            <h2 style="width:100%;text-align:center;padding:50px" align="center">女王大人</h2>
-                        </p>
-                        <table class="table" style="width:100%;padding-top:50px" border="2">
-                            <tbody>
-                                <tr>
-                                    <td style="width:100%" colspan="2" border="2">
-                                        <h4>费用：<span t-esc="o.name"/></h4>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div style="padding: 20px;width: 188px;" class="page">
+                        <div>
+                            <h3>女王大人</h3>
+                            <h3>到店支付</h3>
+                        </div>
+                        <span>**************************</span>
+                        <div>
+                            <label style="display: block;">顾客姓名：
+                                <span t-esc="o.people_ref.name"/>
+                            </label>
+                            <label style="display: block;">订单编号：
+                                <span t-esc="o.name"/>
+                            </label>
+                            <!--<label style="display: block;">销售人：-->
+                                <!--<span t-esc="o.sale"/>-->
+                            <!--</label>-->
+                        </div>
+                        <span>**************************</span>
+                        <div>
+                            <label style="display: block;">消费时间：
+                                <span t-esc="o.trade_time"/>
+                            </label>
+                            <label style="display: block;">总价：
+                                <span t-esc="o.total"/>
+                            </label>
+                            <label style="display: block;">折扣率：
+                                <span t-esc="o.rate_ref.dis_rate"/>
+                            </label>
+                            <label style="display: block;">实际支付：
+                                <span t-esc="o.discount"/>
+                            </label>
+                        </div>
+                        <span>**************************</span>
+                        <div class="section4">
+                            <div style="border-bottom: 1px solid #DADADA;">
+                                <table style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <td width="60%">名称</td>
+                                            <td width="20%">数量</td>
+                                            <td width="20%">单价</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="o.item_ids" t-as="item">
+                                            <td><span t-esc="item.another_name"/></td>
+                                            <td><span t-esc="item.num"/></td>
+                                            <td><span t-esc="item.price_sell"/></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--<div style="border-bottom: 1px solid #DADADA;">-->
+                                <!--<div class="canh">-->
+                                    <!--<label style="float: left;">餐盒费</label>-->
+                                    <!--<label style="float:right;">0</label>-->
+                                    <!--<div style="clear: both;"></div>-->
+                                <!--</div>-->
+                                <!--<div class="peis">-->
+                                    <!--<label style="float: left;">配送费</label>-->
+                                    <!--<label style="float:right;">0</label>-->
+                                    <!--<div style="clear: both;"></div>-->
+                                <!--</div>-->
+                                <!--<div class="manj">-->
+                                    <!--<label style="float: left;">立减优惠</label>-->
+                                    <!--<label style="float:right;">0</label>-->
+                                    <!--<div style="clear: both;"></div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="total">-->
+                                <!--<label style="float: left;">总计</label>-->
+                                <!--<label style="float:right;">39</label>-->
+                                <!--<div style="clear: both;"></div>-->
+                            <!--</div>-->
+                            <!--<div style="text-align: right;">-->
+                                <!--<label>顾客已付款</label>-->
+                            <!--</div>-->
+                            <span>**************************</span>
+                        </div>
+                        <div class="section5">
+                            <!--<label>姓名：小花</label>-->
+                            <label>地址：女王大人店</label>
+                            <!--<label>电话：67890</label>-->
+                        </div>
+                        <span>**************************</span>
                     </div>
+                    <!--<div class="page" style="padding:10px;display:flex;flex-wrap: wrap;justify-content: space-between" >-->
+                    <!--<p style="width:100%;text-align:center" align="center">-->
+                    <!--<h2 style="width:100%;text-align:center;padding:50px" align="center">女王大人</h2>-->
+                    <!--</p>-->
+                    <!--<table class="table" style="width:100%;padding-top:50px" border="2">-->
+                    <!--<tbody>-->
+                    <!--<tr>-->
+                    <!--<td style="width:100%" colspan="2" border="2">-->
+                    <!--<h4>费用：<span t-esc="o.name"/></h4>-->
+                    <!--</td>-->
+                    <!--</tr>-->
+                    <!--</tbody>-->
+                    <!--</table>-->
+                    <!--</div>-->
                 </t>
             </t>
         </template>

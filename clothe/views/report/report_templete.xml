@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+        <report string="小票"
+                id="trade_order_report"
+                model="trade.order"
+                name="clothe.report_templete"
+                file="clothe.report_templete"
+                menu="True"
+                report_type="qweb-pdf">
+        </report>
+        <template id="report_templete">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page" style="padding:10px;display:flex;flex-wrap: wrap;justify-content: space-between" >
+                        <p style="width:100%;text-align:center" align="center">
+                            <h2 style="width:100%;text-align:center;padding:50px" align="center">女王大人</h2>
+                        </p>
+                        <table class="table" style="width:100%;padding-top:50px" border="2">
+                            <tbody>
+                                <tr>
+                                    <td style="width:100%" colspan="2" border="2">
+                                        <h4>费用：<span t-esc="o.name"/></h4>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</openerp>

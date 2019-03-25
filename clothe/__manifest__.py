@@ -17,7 +17,7 @@
     'version': '0.1',
 
     # 'depends': ['mail','ex_theme_v10','ex_web_login','web_export_view_good','report_docx','ir_sequence_autoreset'],
-    'depends': ['mail', 'ex_theme_v10', 'ex_web_login', 'web_export_view_good', 'report_docx'],
+    'depends': ['mail', 'ex_theme_v10', 'ex_web_login', 'web_export_view_good', 'report_docx','report_pdf_preview'],
 
     'data': [
         # 权限
@@ -29,6 +29,8 @@
         'views/base/people.xml',
         'views/base/stock.xml',
         'views/base/report.xml',
+        # 打印
+        'views/report/report_templete.xml',
 
         # 菜单
         'views/menu.xml',
